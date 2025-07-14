@@ -1,14 +1,9 @@
-// Enable submit button after reCAPTCHA verification
-function enableSubmit() {
-    document.getElementById('submitBtn').disabled = false;
-}
-
-// Formspree Form Handling with all advanced features
+// Formspree Form Handling
 document.getElementById('emailForm')?.addEventListener('submit', async function(e) {
     e.preventDefault();
     
     const formStatus = document.getElementById('formStatus');
-    const submitBtn = document.getElementById('submitBtn');
+    const submitBtn = document.querySelector('#emailForm .submit-btn');
     const originalBtnText = submitBtn.innerHTML;
     
     // Show loading state
@@ -19,12 +14,6 @@ document.getElementById('emailForm')?.addEventListener('submit', async function(
     submitBtn.innerHTML = '<span>Sending...</span>';
     
     try {
-        // Verify reCAPTCHA first
-        const recaptchaResponse = grecaptcha.getResponse();
-        if (!recaptchaResponse) {
-            throw new Error('Please complete the reCAPTCHA');
-        }
-        
         const formData = new FormData(this);
         
         const response = await fetch(this.action, {
@@ -36,11 +25,8 @@ document.getElementById('emailForm')?.addEventListener('submit', async function(
         });
         
         if (response.ok) {
-            // If using _next redirect, this won't be seen
-            formStatus.textContent = 'Message sent successfully!';
-            formStatus.className = 'form-success';
-            this.reset();
-            grecaptcha.reset();
+            // Redirect to thank you page on success
+            window.location.href = 'thank-you.html';
         } else {
             const errorData = await response.json();
             throw new Error(errorData.error || 'Failed to send message');
@@ -49,15 +35,9 @@ document.getElementById('emailForm')?.addEventListener('submit', async function(
         console.error('Error:', error);
         formStatus.textContent = 'Error: ' + error.message;
         formStatus.className = 'form-error';
-        grecaptcha.reset();
     } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnText;
-        
-        // Hide status message after 5 seconds
-        setTimeout(() => {
-            formStatus.style.display = 'none';
-        }, 5000);
     }
 });
 
