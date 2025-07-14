@@ -293,29 +293,63 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Demo Request Form
-    document.getElementById('demoRequestForm')?.addEventListener('submit', function(e) {
+    // Add this to your existing script.js file
+    document.getElementById('demoRequestForm')?.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        // Get form data
-        const formData = {
-            name: document.getElementById('demoName').value,
-            email: document.getElementById('demoEmail').value,
-            company: document.getElementById('demoCompany').value,
-            message: document.getElementById('demoMessage').value,
-            project: document.getElementById('demoProjectTitle').textContent
-        };
+        const formStatus = document.getElementById('demoFormStatus');
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+    
+        // Show loading state
+        formStatus.style.display = 'block';
+        formStatus.textContent = 'Sending request...';
+        formStatus.className = '';
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Sending...</span>';
+    
+        try {
+            const formData = new FormData(this);
+            
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
         
-        // Here you would normally send the data to your server
-        console.log('Demo request submitted:', formData);
-        
-        // Show success message
-        alert('Thank you for your demo request! I will contact you soon.');
-        
-        // Close modal and reset form
-        demoModal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-        this.reset();
+            if (response.ok) {
+            // Redirect to thank you page on success
+            window.location.href = 'thank-you.html';
+            } else {
+                const errorData = await response.json();
+                throw new Error(errorData.error || 'Failed to send message');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            formStatus.textContent = 'Error: ' + error.message;
+            formStatus.className = 'form-error';
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        }
+    });
+
+    // Update the request demo button click handler to set the project title
+    document.querySelectorAll('.request-demo-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const projectId = this.getAttribute('data-project');
+            const project = projects[projectId];
+            
+            if (project) {
+                document.getElementById('demoProjectTitle').textContent = project.title;
+                document.getElementById('demoSubject').value = `New Demo Request for ${project.title}`;
+                document.getElementById('demoProject').value = project.title;
+                demoModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        });
     });
     
     // Existing filter and animation code...
