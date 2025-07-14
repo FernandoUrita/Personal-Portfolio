@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urita Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2364ffda%22>FU</text></svg>">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -257,35 +259,40 @@
             </div>
         </div>
     
-        <!-- Request Demo Modal -->
-        <div class="modal" id="demoModal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h2>Request Demo for <span id="demoProjectTitle"></span></h2>
-                <form id="demoRequestForm">
-                    <div class="form-group">
-                        <label for="demoName">Your Name</label>
-                        <input type="text" id="demoName" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="demoEmail">Email Address</label>
-                        <input type="email" id="demoEmail" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="demoCompany">Company (Optional)</label>
-                        <input type="text" id="demoCompany" name="company">
-                    </div>
-                    <div class="form-group">
-                        <label for="demoMessage">Additional Information</label>
-                        <textarea id="demoMessage" name="message" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn primary-btn">
-                        <span>Send Request</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-                    </button>
-                </form>
+        <!-- Replace the existing demo modal with this: -->
+<div class="modal" id="demoModal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Request Demo for <span id="demoProjectTitle"></span></h2>
+        <form action="https://formspree.io/f/meozjzlr" method="POST" id="demoRequestForm">
+            <input type="hidden" name="_subject" id="demoSubject" value="New Demo Request">
+            <input type="hidden" name="_project" id="demoProject">
+            <input type="text" name="_gotcha" style="display:none">
+            
+            <div class="form-group">
+                <label for="demoName">Your Name</label>
+                <input type="text" id="demoName" name="name" required>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="demoEmail">Email Address</label>
+                <input type="email" id="demoEmail" name="_replyto" required>
+            </div>
+            <div class="form-group">
+                <label for="demoCompany">Company (Optional)</label>
+                <input type="text" id="demoCompany" name="company">
+            </div>
+            <div class="form-group">
+                <label for="demoMessage">Additional Information</label>
+                <textarea id="demoMessage" name="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn primary-btn">
+                <span>Send Request</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+        </form>
+        <div id="demoFormStatus"></div>
+    </div>
+</div>
     
         <div class="view-more">
             <a href="#" class="btn secondary-btn">
