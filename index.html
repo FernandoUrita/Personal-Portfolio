@@ -421,16 +421,11 @@
         <p class="contact-subtitle">I'm currently available for freelance work and new opportunities. Let's talk about how I can help with your project!</p>
     
         <div class="contact-container">
+            <!-- In the contact section, replace the form with this: -->
             <div class="contact-form">
                 <form action="https://formspree.io/f/meozjzlr" method="POST" id="emailForm">
                     <!-- Honeypot Field (Anti-Spam) -->
                     <input type="text" name="_gotcha" style="display:none">
-
-                    <!-- Hidden _next field for redirect -->
-                    <input type="hidden" name="_next" value="/thank-you.html">
-
-                    <!-- reCAPTCHA (optional) -->
-                    <div class="g-recaptcha" data-sitekey="6Le9ToIrAAAAAKvpK95L2Pk3tu2PLDiEjHJnJ326" data-callback="enableSubmit"></div>
 
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -448,7 +443,7 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn submit-btn" id="submitBtn" disabled>
+                    <button type="submit" class="btn submit-btn">
                         <span>Send Message</span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
                     </button>
@@ -516,9 +511,6 @@
         <p>&copy; 2023 Urita. All rights reserved.</p>
         <p>Designed with love and passion.</p>
     </footer>
-
-    <!-- reCAPTCHA API -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Your existing script -->
     <script src="script.js"></script>
