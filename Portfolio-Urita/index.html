@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urita Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Urita</h1>
+        <nav>
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h3 class="greeting">Hi, my name is</h3>
+                <h1 class="name">Fernando Urita.</h1>
+                <h2 class="title">I build things for the web.</h2>
+            
+                <p class="description">
+                    I'm a Web developer specializing in building (and occasionally designing) exceptional digital experiences. Currently focused on learning modern technologies and frameworks.
+                </p>
+            
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn primary-btn">
+                        Get In Touch
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1QiN5uBuNCxYLVn0z_ezgARGz0fflKiCA/view?usp=sharing" target="_blank" class="btn secondary-btn">
+                        View Resume
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="https://scontent.fmnl9-4.fna.fbcdn.net/v/t1.6435-9/81988658_1259625214248218_7813991459408838656_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeGEGSrOMQkb427s5G-TV3jO28XMYvwwfOjbxcxi_DB86MadAtQCbw--aOlcYHl_ccA-8LfSMbmPbzhsmGC3yIVj&_nc_ohc=y_4TwZA3RJwQ7kNvwHVFvXC&_nc_oc=AdmDubUvHAasEgXvkqcz5Ah3Nw7NyHvHU7UqA6DnpvZ2YVhNf8VjyK__1XGlP4zJUqg&_nc_zt=23&_nc_ht=scontent.fmnl9-4.fna&_nc_gid=IpUFeSYyUf5K-W0XNTmLeQ&oh=00_AfS8dtVrrY31o4q76ebmyTBfNfqhXTxSyfh55k5X6AVNlA&oe=689BCDE2" alt="Fernando Urita" class="profile-image">
+                    <div class="image-frame"></div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="scroll-indicator">
+            <span>Scroll down</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>My Projects</h2>
+        <p class="section-subtitle">Here are some of my recent works. Each project represents a unique challenge and learning opportunity.</p>
+    
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web Apps</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+        </div>
+    
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="https://scontent.fmnl9-3.fna.fbcdn.net/v/t39.30808-6/518086123_2808091252734932_4719525419133692349_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=bd9a62&_nc_eui2=AeFsBoI0CsdeMrgfbDq_TbQyg0rMZ1XKCeODSsxnVcoJ42yKmGkhV6oSKiHjcF9V9gj9xGnVjDn_O74PQELb4_rt&_nc_ohc=BRRyDlNSTukQ7kNvwHHSMMU&_nc_oc=AdkzZQqW9XT91p5P8RNf6WDTkC3ALSEErLBCkQZjqFMd-Liti9lYVNgdUrP9RWNEoBU&_nc_zt=23&_nc_ht=scontent.fmnl9-3.fna&_nc_gid=vgIp2P9DETyxcXv_iTLsiA&oh=00_AfQ3CcvioM0fSUcm2EJ75Cc9Wh1ksUib56P8JAeUtVPUrg&oe=687A695F" alt="Story Website">
+                    <div class="project-links">
+                        <button class="project-link view-details-btn" data-project="1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                            View Details
+                        </button>
+                        <button class="project-link request-demo-btn" data-project="1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            Request Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Story Website - AKLAT-TURO</h3>
+                    <p class="project-description">This project focuses on creating a collection of Filipino short stories designed to engage students and foster a love for reading. It serves as a thesis project for academic purposes.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" data-category="design">
+                <div class="project-image">
+                    <img src="https://scontent.fmnl9-2.fna.fbcdn.net/v/t39.30808-6/518745659_2808108119399912_2624044521247303479_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=bd9a62&_nc_eui2=AeEWAcqpFWkkuXKPSMgy0METOnW8zhUTWVw6dbzOFRNZXKfnaYSn_c8Q5qEdrBGLQY-PNfSuFzqbIz4ZOHG0CrUE&_nc_ohc=Bp3LpBaOHLUQ7kNvwHEkGU7&_nc_oc=AdmQe1bpctbPWvOEWqzUJVxc7zz_hiGgKbRRsPpYtxLt0wsfsxUZMx_v4jKdXnb-J0g&_nc_zt=23&_nc_ht=scontent.fmnl9-2.fna&_nc_gid=dBVX8x_UShkgCeEf164POg&oh=00_AfRWUapF2es2f57PmZ0vW6lRd3357jpZfHweFZ_CoRERaA&oe=687A6667" alt="Portfolio Website">
+                    <div class="project-links">
+                        <button class="project-link view-details-btn" data-project="2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                            View Details
+                        </button>
+                        <button class="project-link request-demo-btn" data-project="2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            Request Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Portfolio Website</h3>
+                    <p class="project-description">A responsive portfolio design with smooth animations and dark/light mode toggle.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>GSAP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="https://scontent.fmnl9-2.fna.fbcdn.net/v/t39.30808-6/518638492_2808118932732164_8581552625169110812_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=bd9a62&_nc_eui2=AeE-5PQpDYwlRLyFYA6kjbss9IJsICub27D0gmwgK5vbsPGF0syCQsXpaYlEkP4-RAdwLB-Wapr_qBlfBwPkebZH&_nc_ohc=3g-NLaQgs3cQ7kNvwFwGDV1&_nc_oc=AdnQvsufPgHSsSnrB2afBznGDlbSBpv-IfnHokRinFZQ-xnm1--B2TKLM6h4w_CGdqM&_nc_zt=23&_nc_ht=scontent.fmnl9-2.fna&_nc_gid=OumpWwp1UwhWHvVMR5D2CA&oh=00_AfRuOkZTJOwdM5YA8jkm2Ge_23pse5FlKEZblVkSAox2Hw&oe=687A3AA3" alt="Small Gallery Template">
+                    <div class="project-links">
+                        <button class="project-link view-details-btn" data-project="3">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                            View Details
+                        </button>
+                        <button class="project-link request-demo-btn" data-project="3">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            Request Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Small Gallery Template</h3>
+                    <p class="project-description">This project is Website/web applications, Users will be able to see thier Gallery on Website, and this small project is school purposes only.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card" data-category="mobile">
+                <div class="project-image">
+                    <img src="https://scontent.fmnl9-6.fna.fbcdn.net/v/t39.30808-6/517658571_2808091672734890_1137505978138209620_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=bd9a62&_nc_eui2=AeGT3S5kBoLEqpuIkFkhl0VwE1eWtfS4Th0TV5a19LhOHeyA0RJQaPEKpZs869Flx_vXAcgLTzHu9aJfmVINshcM&_nc_ohc=fkUyIJjO3qUQ7kNvwGCKVPr&_nc_oc=AdntCsWx4uYfFK9UvX1wWTpMCiEDUdkrPbbxMzvQamMvR9POSw5grsyHgkvVFesxFO0&_nc_zt=23&_nc_ht=scontent.fmnl9-6.fna&_nc_gid=cOE6zcCJqu_9pabTNojsig&oh=00_AfSBYuQCTOEu1-Qt3tKj-bCbAPQ-cXdf5xvOoaOWUoGeCA&oe=687A519F" alt="Flutter Spotify UI">
+                    <div class="project-links">
+                        <button class="project-link view-details-btn" data-project="4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                            View Details
+                        </button>
+                        <button class="project-link request-demo-btn" data-project="4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            Request Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Flutter Spotify UI</h3>
+                    <p class="project-description">This project is Website/web applications, Users will be able to select tracks and our UI updates accordingly. You’ll use provider to share state throughout this application and keep track of the currently selected song.</p>
+                    <div class="project-tech">
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>Swift</span>
+                        <span>Ruby</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="https://scontent.fmnl9-3.fna.fbcdn.net/v/t39.30808-6/518357750_2808069699403754_8541216769361108359_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=bd9a62&_nc_eui2=AeGRNf6HP68xawaY5wTb0J5pFn1aTcGuJI4WfVpNwa4kjoLKTGyViyIZg2v2Q4OlvT1vAdg9GFPMYZxMVBYwlFbW&_nc_ohc=bl11H4Ud4NQQ7kNvwGY3_zI&_nc_oc=AdnwT2oupspcxWAL5TyVAYXVT1dL4EtGZnv7ZsIuf7Bsz4qNvtFpWo4FzyZtSPauplQ&_nc_zt=23&_nc_ht=scontent.fmnl9-3.fna&_nc_gid=0ylkkgmMmfVObrmsjHRygQ&oh=00_AfRFMUKH81e1LCvJG3MhlK1PG3FJhTZJRByto5zeBhHXzQ&oe=687A3E1C" alt="Online Bookings">
+                    <div class="project-links">
+                        <button class="project-link view-details-btn" data-project="5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                            View Details
+                        </button>
+                        <button class="project-link request-demo-btn" data-project="5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            Request Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Hotel and Restaurant Management System (Online Bookings) | Capstone Project</h3>
+                    <p class="project-description">I developed this capstone project as a request for another group. It features an online reservation system (for events, rooms, restaurants, facilities, etc.) and uses AI to enhance customer service. We integrated this system using REST API to enable seamless data transfer with other subsystems, such as HR, Logistics, and Core.</p>
+                    <div class="project-tech">
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>Tailwind CSS</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="https://scontent.fmnl9-6.fna.fbcdn.net/v/t39.30808-6/518150484_2808134169397307_7256050505931035019_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=bd9a62&_nc_eui2=AeFqnRY7BK5gMsKQ5OTrV9jVwPR-bQsTNyzA9H5tCxM3LHaoljSZ5wiys9vKdbDpVkoPCTLiM1JR-nVkDll3pkxp&_nc_ohc=Qp4lgw3YrJgQ7kNvwEr17eo&_nc_oc=AdkPlNyHyQe2jmwa60nd2O6Jfb-Q6_oaesSnwua7E5FdtsorAaz7utOLLp_v3IvuEbA&_nc_zt=23&_nc_ht=scontent.fmnl9-6.fna&_nc_gid=BhCY5K9g6SMIlgPzQd3TPw&oh=00_AfTuntbCcu2vcnW0ZkCoNfvKQE3vqMA2cKE4ss14IJM1Gg&oe=687A4201" alt="Front Desk">
+                    <div class="project-links">
+                        <button class="project-link view-details-btn" data-project="6">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                            View Details
+                        </button>
+                        <button class="project-link request-demo-btn" data-project="6">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            Request Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Hotel and Restaurant Management System (Front Desk) | Capstone Project</h3>
+                    <p class="project-description">We developed a kiosk-based ordering system for both hotel and restaurant services. For the hotel, it facilitates room bookings, while for the restaurant, it handles food orders. Additionally, we implemented AI to forecast and predict weekly, monthly, and yearly income, We integrated this system using REST API to enable seamless data transfer with other subsystems, such as HR, Logistics, and Core.</p>
+                    <div class="project-tech">
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>Tailwind CSS</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Project Details Modal -->
+        <div class="modal" id="projectModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+                    <img id="modalProjectImage" src="" alt="Project Image">
+                    <div class="modal-text">
+                        <h2 id="modalProjectTitle"></h2>
+                        <div class="modal-tech" id="modalProjectTech"></div>
+                        <p id="modalProjectDescription"></p>
+                        <div class="modal-features" id="modalProjectFeatures"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn secondary-btn close-modal-btn">Close</button>
+                    <button class="btn primary-btn request-demo-btn">Request Demo</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Request Demo Modal -->
+        <div class="modal" id="demoModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Request Demo for <span id="demoProjectTitle"></span></h2>
+                <form id="demoRequestForm">
+                    <div class="form-group">
+                        <label for="demoName">Your Name</label>
+                        <input type="text" id="demoName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="demoEmail">Email Address</label>
+                        <input type="email" id="demoEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="demoCompany">Company (Optional)</label>
+                        <input type="text" id="demoCompany" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="demoMessage">Additional Information</label>
+                        <textarea id="demoMessage" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">
+                        <span>Send Request</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    
+        <div class="view-more">
+            <a href="#" class="btn secondary-btn">
+                View More Projects
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate full-stack developer with 1 year of experience creating web applications. My journey in tech began when I built my first website at 20, and I've been hooked ever since, and i'm good at front end development because this is my first time to know how to code.</p>
+            
+                    <div class="highlight-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <p>Specialized in building responsive, user-friendly web applications with modern technologies</p>
+                    </div>
+                
+                    <p>When I'm not coding, you can find me contributing to open-source projects, learning new frameworks, or Playing my hobbies like Basketball, Online Games, Jogging.</p>
+                
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Cups of Coffee</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="about-image">
+                    <img src="https://scontent.fmnl9-1.fna.fbcdn.net/v/t1.6435-9/72777692_1188645238012883_2201653381854920704_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeEBZsXpWivNTTZM9mnC8uJSSF74JTC_RAtIXvglML9EC_StHb8Ti_XJq4u3m2I0iy7HUV5Oeij0pDx-tWu9keJA&_nc_ohc=vlkSJPa0xIcQ7kNvwExxwij&_nc_oc=AdmAhFNIFvz5gB_BJHkhB1BZdwexQ5vMU0n0vF8ryJ_zHMV_hcNEXERbK-crdDaMxxk&_nc_zt=23&_nc_ht=scontent.fmnl9-1.fna&_nc_gid=Es4A_PDy8Gi9ApAn_yjGuw&oh=00_AfTy3N51DEHAzqZRzXAMHKRU36cOL9xQIjeUd99ySVCBRg&oe=689BB36F" alt="Urita working" class="profile-image">
+                    <div class="image-frame"></div>
+                    <!-- <div class="tech-bubbles">
+                        <span class="bubble">HTML</span>
+                        <span class="bubble">CSS</span>
+                        <span class="bubble">JS</span>
+                        <span class="bubble">PHP</span>
+                    </div> -->
+                </div>
+            </div>
+        
+            <div class="timeline">
+                <h3>My Journey</h3>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025 - Present</div>
+                    <div class="timeline-content">
+                        <h4>Freelance Web Developer</h4>
+                        <p>We build custom web solutions for clients and deploy their systems to their preferred hosting platform.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021 - 2025</div>
+                    <div class="timeline-content">
+                        <h4>Information Technology Student</h4>
+                        <p>Bestlink College of the Philippines, focused on web development and For my last year we build website.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h4>First Website</h4>
+                        <p>Built my first complete website using HTML and CSS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <h2>My Capabilities</h2>
+        <p>I love learning new things and growing my skills. Right now, I'm good at the following:</p>
+        <div class="skills-container">
+            <div class="skill-item">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>
+                <span>HTML</span>
+            </div>
+            <div class="skill-item">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 0h384v256H192v256H0V0z"/></svg>
+                <span>CSS</span>
+            </div>
+            <div class="skill-item">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>
+                <span>JavaScript</span>
+            </div>
+            <div class="skill-item">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM240 320h-48v48h-32v-48H80v-32h80v-80h-80v-32h80V96h32v80h48V96h32v224h-32z"/></svg>
+                <span>PHP</span>
+            </div>
+            <div class="skill-item">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448 80v352c0 26.5-21.5 48-48 48H154.4c9.8-16.4 22.4-40 27.4-59.3 3-11.5 15.3-58.4 15.3-58.4 8 15.3 31.4 28.2 56.3 28.2 74.1 0 127.4-68.1 127.4-152.7 0-81.1-66.2-141.8-151.4-141.8-106 0-162.2 71.1-162.2 148.6 0 36 19.2 80.8 49.8 95.1 4.7 2.2 7.1 1.2 8.2-3.3.8-3.4 5-20.1 6.8-27.8.6-2.5.3-4.6-1.7-7-10.1-12.3-28.9-15-44.1-15-63.4 0-46.3 35.9-91.9 102.9-91.9 57.6 0 95.6 39.9 95.6 81.6 0 64.3-32.8 109.7-78.2 109.7-24.3 0-42.5-20.1-36.6-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z"/></svg>
+                <span>MySQL</span>
+            </div>
+            <div class="skill-item">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M9 13.7q1.4-5.6 7-5.6 1.9 0 3.1.7t2.3 1.8 1.5 2.9.5 3.8q0 3.7-1.9 6.1t-5.3 2.5q-1.9 0-3.4-.7T9.4 22.5v3.9H5.9V5.9h3.5v7.8zm.4 6.5q.6 1.3 1.7 2.1t2.5.8q2.3 0 3.6-1.6t1.3-4.3q0-2.4-1.3-4T13.6 11q-1.4 0-2.5.8t-1.7 2.1v4.3zM23.3 13.3q0-1.2.8-2t2-.8 2 .8.8 2-.8 2-2 .8-2-.8-.8-2z"/></svg>
+                <span>Tailwind CSS</span>
+            </div>
+            <div class="skill-item">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M333.5,201.4c0-22.1-15.6-34.3-43-34.3h-50.4v71.2h42.5C315.4,238.2,333.5,225,333.5,201.4z M517,188.6 c-9.5-30.9-10.9-68.8-9.8-98.1c1.1-30.5-22.7-58.5-54.7-58.5H123.7c-32.1,0-55.8,28.1-54.7,58.5c1,29.3-0.3,67.2-9.8,98.1 c-9.6,31-25.7,50.6-52.2,53.1v28.5c26.4,2.5,42.6,22.1,52.2,53.1c9.5,30.9,10.9,68.8,9.8,98.1c-1.1,30.5,22.7,58.5,54.7,58.5h328.7 c32.1,0,55.8-28.1,54.7-58.5c-1-29.3,0.3-67.2,9.8-98.1c9.6-31,25.7-50.6,52.1-53.1v-28.5C542.7,239.2,526.5,219.6,517,188.6z M309.8,415.2h-57.2V256h84.6c24.3,0,41.6,10.6,53.9,27.4c12.3,16.8,16,39.6,8.7,66.1c-3.4,12.5-10.5,23.5-20.3,31.7 c-9.8,8.2-21.6,12.9-34.1,14.2l52.2,65.8H360.4L309.8,415.2z M132.5,173.9h84.3v68.6h-84.3V173.9z M132.5,415.2V256h84.3v159.2H132.5z"/></svg>
+                <span>Bootstrap</span>
+            </div>
+            <div class="skill-item">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+                <span>Git</span>
+            </div>
+        </div>
+
+        <h3 class="studying-title">Currently Studying</h3>
+        <div class="skills-container">
+            <div class="skill-item">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M185.7 268.1h76.2l-38.1-91.6-38.1 91.6zM223.8 32L16 106.4l31.8 275.7 176 97.9 176-97.9 31.8-275.7zM354 373.8h-48.6l-26.2-65.4H168.6l-25.4 65.4H93.7L223.8 81.5z"/></svg>
+                <span>Angular</span>
+            </div>
+            <div class="skill-item">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>
+                <span>React</span>
+            </div>
+            <div class="skill-item">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 508c-6.7 0-13.5-1.8-19.8-5.5l-156.9-92.5c-12.7-7.5-20.2-21.1-20.2-35.5V137c0-14.4 7.5-28 20.2-35.5L204.2 9.5c12.5-7.4 27.2-7.4 39.7 0l156.9 92.5c12.7 7.5 20.2 21.1 20.2 35.5v238c0 14.4-7.5 28-20.2 35.5L243.8 502.5c-6.3 3.7-13.1 5.5-19.8 5.5zm-156.9-144l156.9 92.5 156.9-92.5V137L224 44.5 67.1 137v227z"/><path d="M224 362c-13.2 0-24-10.8-24-24V174c0-13.2 10.8-24 24-24s24 10.8 24 24v164c0 13.2-10.8 24-24 24z"/><circle cx="224" cy="394" r="24"/></svg>
+                <span>Node.js</span>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <p class="contact-subtitle">I'm currently available for freelance work and new opportunities. Let's talk about how I can help with your project!</p>
+    
+        <div class="contact-container">
+            <div class="contact-form">
+                <form action="https://formspree.io/f/meozjzlr" method="POST" id="emailForm">
+                    <!-- Honeypot Field (Anti-Spam) -->
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <!-- Hidden _next field for redirect -->
+                    <input type="hidden" name="_next" value="/thank-you.html">
+
+                    <!-- reCAPTCHA (optional) -->
+                    <!-- <div class="g-recaptcha" data-sitekey="your-site-key" data-callback="enableSubmit"></div> -->
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="_replyto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="_subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn submit-btn" id="submitBtn" disabled>
+                        <span>Send Message</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                    </button>
+                </form>
+                <div id="formStatus"></div>
+            </div>
+        
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </div>
+                    <div class="contact-detail">
+                        <h3>Email Me</h3>
+                        <a href="mailto:fernandourita0@gmail.com">fernandourita0@gmail.com</a>
+                    </div>
+                </div>
+            
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </div>
+                    <div class="contact-detail">
+                        <h3>Location</h3>
+                        <p>Manila, Philippines</p>
+                    </div>
+                </div>
+            
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+                    </div>
+                    <div class="contact-detail">
+                        <h3>Call Me</h3>
+                        <a href="tel:+1234567890">+63 939 284 8748</a>
+                    </div>
+                </div>
+            
+                <div class="social-links">
+                    <h3>Follow Me</h3>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/fernando-urita-06a70936b" target="_blank" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                        </a>
+                        <a href="https://github.com/FernandoUrita" target="_blank" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        </a>
+                        <a href="https://web.facebook.com/fernando.urita10" target="_blank" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            
+                <div class="resume-download">
+                    <a href="https://drive.google.com/file/d/1QiN5uBuNCxYLVn0z_ezgARGz0fflKiCA/view?usp=sharing" target="_blank" class="btn resume-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Urita. All rights reserved.</p>
+        <p>Designed with love and passion.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
