@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         2: {
             title: "Portfolio Website",
-            image: "assets/img/port2.png",
+            image: "assets/img/port2.jpg",
             description: "A responsive portfolio design with smooth animations and dark/light mode toggle. This project showcases my skills and projects effectively.",
             technologies: ["HTML5", "CSS3", "JavaScript", "GSAP", "Bootstrap", "Font Awesome"],
             features: [
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         3: {
             title: "Small Gallery Template",
-            image: "assets/img/simple_progect.png",
+            image: "assets/img/simple_project.jpg",
             description: "This project is Website/web applications, Users will be able to see thier Gallery on Website, and this small project is school purposes only.",
             technologies: ["HTML", "CSS", "JavaScript"],
             features: [
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         4: {
             title: "Flutter Spotify UI",
-            image: "assets/img/spotify.png",
+            image: "assets/img/spotify.jpg",
             description: "This project is Website/web applications, Users will be able to select tracks and our UI updates accordingly. You’ll use provider to share state throughout this application and keep track of the currently selected song.",
             technologies: ["Flutter", "Dart", "Swift", "Ruby"],
             features: [
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         5: {
             title: "Online Bookings",
-            image: "assets/img/online.png",
+            image: "assets/img/online.jpg",
             description: "I developed this capstone project as a request for another group. It features an online reservation system (for events, rooms, restaurants, facilities, etc.) and uses AI to enhance customer service. We integrated this system using REST API to enable seamless data transfer with other subsystems, such as HR, Logistics, and Core.",
             technologies: ["PHP", "MySQL", "Tailwind CSS", "HTML", "CSS", "JavaScript", "Bootstrap"],
             features: [
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         6: {
             title: "Front Desk",
-            image: "assets/img/kiosk.png",
+            image: "assets/img/kiosk.jpg",
             description: "We developed a kiosk-based ordering system for both hotel and restaurant services. For the hotel, it facilitates room bookings, while for the restaurant, it handles food orders. Additionally, we implemented AI to forecast and predict weekly, monthly, and yearly income, We integrated this system using REST API to enable seamless data transfer with other subsystems, such as HR, Logistics, and Core.",
             technologies: ["PHP", "MySQL", "Tailwind CSS", "HTML", "CSS", "JavaScript", "Bootstrap"],
             features: [
@@ -354,3 +354,215 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Existing filter and animation code...
 });
+
+// Enhanced Header Scroll Effect
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// Enhanced Smooth Scrolling with offset
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            const offsetTop = targetElement.offsetTop - 100;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Enhanced Project Filtering with better animations
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Update active button
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.style.transform = 'scale(1)';
+            });
+            this.classList.add('active');
+            this.style.transform = 'scale(1.05)';
+            
+            const filterValue = this.getAttribute('data-filter');
+            
+            // Enhanced filter animation
+            projectCards.forEach((card, index) => {
+                const category = card.getAttribute('data-category');
+                
+                if (filterValue === 'all' || category === filterValue) {
+                    setTimeout(() => {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0) scale(1)';
+                        }, 50);
+                    }, index * 100);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px) scale(0.95)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+});
+
+// Enhanced Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observe all project cards and skill items
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.project-card, .skill-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+});
+
+// Enhanced Form Validation
+function enhanceFormValidation() {
+    const forms = document.querySelectorAll('form');
+    
+    forms.forEach(form => {
+        const inputs = form.querySelectorAll('input, textarea');
+        
+        inputs.forEach(input => {
+            // Add real-time validation
+            input.addEventListener('input', function() {
+                validateField(this);
+            });
+            
+            // Add focus effects
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.classList.remove('focused');
+                validateField(this);
+            });
+        });
+    });
+    
+    function validateField(field) {
+        const value = field.value.trim();
+        const formGroup = field.parentElement;
+        
+        // Remove existing validation classes
+        formGroup.classList.remove('valid', 'invalid');
+        
+        if (value === '') {
+            formGroup.classList.add('invalid');
+            return false;
+        }
+        
+        // Email validation
+        if (field.type === 'email') {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(value)) {
+                formGroup.classList.add('invalid');
+                return false;
+            }
+        }
+        
+        formGroup.classList.add('valid');
+        return true;
+    }
+}
+
+// Initialize enhanced features
+document.addEventListener('DOMContentLoaded', function() {
+    enhanceFormValidation();
+    
+    // Add loading animation to images
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.addEventListener('load', function() {
+            this.classList.add('loaded');
+        });
+    });
+});
+
+// Enhanced Cursor Effect (optional)
+function createCursorFollower() {
+    const cursor = document.createElement('div');
+    cursor.style.cssText = `
+        position: fixed;
+        width: 8px;
+        height: 8px;
+        background: var(--secondary-color);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transition: transform 0.1s ease;
+        mix-blend-mode: difference;
+    `;
+    document.body.appendChild(cursor);
+    
+    const cursorFollower = document.createElement('div');
+    cursorFollower.style.cssText = `
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        border: 2px solid var(--secondary-color);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9998;
+        transition: all 0.2s ease;
+        mix-blend-mode: difference;
+    `;
+    document.body.appendChild(cursorFollower);
+    
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+        
+        cursorFollower.style.left = (e.clientX - 20) + 'px';
+        cursorFollower.style.top = (e.clientY - 20) + 'px';
+    });
+    
+    // Add hover effects
+    const hoverElements = document.querySelectorAll('a, button, .project-card, .skill-item');
+    hoverElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.style.transform = 'scale(2)';
+            cursorFollower.style.transform = 'scale(1.5)';
+            cursorFollower.style.background = 'rgba(100, 255, 218, 0.1)';
+        });
+        
+        el.addEventListener('mouseleave', () => {
+            cursor.style.transform = 'scale(1)';
+            cursorFollower.style.transform = 'scale(1)';
+            cursorFollower.style.background = 'transparent';
+        });
+    });
+}
+
