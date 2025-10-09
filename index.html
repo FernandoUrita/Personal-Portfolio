@@ -1,14 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <!-- SEO Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urita Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Primary Meta Tags -->
+    <title>Fernando Urita - Web Developer & Full-Stack Developer Portfolio</title>
+    <meta name="title" content="Fernando Urita - Web Developer & Full-Stack Developer Portfolio">
+    <meta name="description" content="Fernando Urita is a passionate full-stack web developer specializing in creating exceptional digital experiences. View my projects in web development, mobile apps, and design.">
+    <meta name="keywords" content="web developer, full-stack developer, frontend developer, portfolio, HTML, CSS, JavaScript, PHP, MySQL, React, Node.js, Fernando Urita">
+    <meta name="author" content="Fernando Urita">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://urita-portfolio.com/">
+    <meta property="og:title" content="Fernando Urita - Web Developer & Full-Stack Developer Portfolio">
+    <meta property="og:description" content="Fernando Urita is a passionate full-stack web developer specializing in creating exceptional digital experiences.">
+    <meta property="og:image" content="https://urita-portfolio.com/assets/img/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://urita-portfolio.com/">
+    <meta property="twitter:title" content="Fernando Urita - Web Developer & Full-Stack Developer Portfolio">
+    <meta property="twitter:description" content="Fernando Urita is a passionate full-stack web developer specializing in creating exceptional digital experiences.">
+    <meta property="twitter:image" content="https://urita-portfolio.com/assets/img/twitter-image.jpg">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#64ffda">
+    <meta name="msapplication-TileColor" content="#64ffda">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://urita-portfolio.com/">
+    
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2364ffda%22>FU</text></svg>">
-    <!-- Font Awesome for icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Fernando Urita",
+      "jobTitle": "Web Developer & Full-Stack Developer",
+      "url": "https://urita-portfolio.com",
+      "sameAs": [
+        "https://github.com/FernandoUrita",
+        "https://www.linkedin.com/in/fernando-urita-06a70936b",
+        "https://web.facebook.com/fernando.urita10"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      },
+      "description": "Fernando Urita is a passionate full-stack web developer specializing in creating exceptional digital experiences.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Manila",
+        "addressCountry": "Philippines"
+      },
+      "email": "fernandourita0@gmail.com",
+      "telephone": "+63-939-284-8748",
+      "knowsAbout": ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "React", "Node.js", "Web Development", "Full-Stack Development"]
+    }
+    </script>
+    
+    <style>
+        /* Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .chatbot-toggle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #64ffda;
+            color: #0a192f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(100, 255, 218, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 24px;
+        }
+
+        .chatbot-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(100, 255, 218, 0.5);
+        }
+
+        .chatbot-window {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 500px;
+            background: #112240;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #233554;
+        }
+
+        .chatbot-header {
+            padding: 15px;
+            background: #0a192f;
+            color: #64ffda;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #233554;
+        }
+
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: #64ffda;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .message {
+            padding: 10px 15px;
+            border-radius: 18px;
+            max-width: 80%;
+            line-height: 1.4;
+        }
+
+        .bot-message {
+            background: #233554;
+            color: #e6f1ff;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+        }
+
+        .user-message {
+            background: #64ffda;
+            color: #0a192f;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+
+        .chatbot-input {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid #233554;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #233554;
+            background: #0a192f;
+            color: #e6f1ff;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        .chatbot-input button {
+            background: #64ffda;
+            color: #0a192f;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-input button:hover {
+            background: #52e0c4;
+        }
+        
+        /* Skip to main content for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #64ffda;
+            color: #0a192f;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 10000;
+            transition: top 0.3s;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -168,7 +390,7 @@
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Flutter Spotify UI</h3>
-                    <p class="project-description">This project is Website/web applications, Users will be able to select tracks and our UI updates accordingly. You’ll use provider to share state throughout this application and keep track of the currently selected song.</p>
+                    <p class="project-description">This project is Website/web applications, Users will be able to select tracks and our UI updates accordingly. You'll use provider to share state throughout this application and keep track of the currently selected song.</p>
                     <div class="project-tech">
                         <span>Flutter</span>
                         <span>Dart</span>
@@ -258,7 +480,7 @@
             </div>
         </div>
     
-        <!-- Replace the existing demo modal with this: -->
+        <!-- Demo Request Modal -->
         <div class="modal" id="demoModal">
             <div class="modal-content">
                 <span class="close-modal">&times;</span>
@@ -333,12 +555,6 @@
                 <div class="about-image">
                     <img src="assets/img/dp.jpg" alt="Urita working" class="profile-image">
                     <div class="image-frame"></div>
-                    <!-- <div class="tech-bubbles">
-                        <span class="bubble">HTML</span>
-                        <span class="bubble">CSS</span>
-                        <span class="bubble">JS</span>
-                        <span class="bubble">PHP</span>
-                    </div> -->
                 </div>
             </div>
         
@@ -518,7 +734,123 @@
         <p>Designed with love and passion.</p>
     </footer>
 
-    <!-- Your existing script -->
-    <script src="assets/scripts/script.js"></script>
+    <!-- Chatbot Container -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbotToggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>Urita Assistant</h3>
+                <button class="chatbot-close" id="chatbotClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot-message">
+                    Hi there! I'm Urita's assistant. How can I help you today?
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Type your message...">
+                <button id="chatbotSend">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/scripts.js"></script>
+
+    <script>
+        // Chatbot functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatbotToggle = document.getElementById('chatbotToggle');
+            const chatbotWindow = document.getElementById('chatbotWindow');
+            const chatbotClose = document.getElementById('chatbotClose');
+            const chatbotMessages = document.getElementById('chatbotMessages');
+            const chatbotInput = document.getElementById('chatbotInput');
+            const chatbotSend = document.getElementById('chatbotSend');
+            
+            // Chatbot responses
+            const chatbotResponses = {
+                greeting: ["Hello! How can I help you?", "Hi there! What can I do for you?", "Hey! How can I assist you today?"],
+                portfolio: ["I'm Fernando Urita, a web developer with experience in frontend and backend technologies.", "My portfolio showcases various projects including web applications, mobile apps, and design work.", "You can view my projects in the Projects section above."],
+                projects: ["I have worked on several projects including a Story Website, Portfolio Website, Gallery Template, Spotify UI clone, and Hotel Management Systems.", "My projects range from simple websites to complex full-stack applications.", "You can view detailed information about each project by clicking the 'View Details' button."],
+                contact: ["You can contact me via email at fernandourita0@gmail.com or through the contact form on this page.", "Feel free to reach out for collaborations, job opportunities, or just to say hello!", "I'm currently open to new opportunities and interesting projects."],
+                skills: ["My skills include HTML, CSS, JavaScript, React, Node.js, PHP, MySQL, and various tools like Git and Figma.", "I'm continuously learning new technologies to expand my skillset.", "You can see my skill levels in the Skills section above."],
+                default: ["I'm not sure I understand. Can you rephrase that?", "I'm still learning. Could you ask something else?", "I don't have an answer for that right now. Try asking about my projects, skills, or how to contact me."]
+            };
+            
+            // Toggle chatbot window
+            chatbotToggle.addEventListener('click', function() {
+                chatbotWindow.style.display = chatbotWindow.style.display === 'flex' ? 'none' : 'flex';
+            });
+            
+            // Close chatbot window
+            chatbotClose.addEventListener('click', function() {
+                chatbotWindow.style.display = 'none';
+            });
+            
+            // Send message function
+            function sendMessage() {
+                const message = chatbotInput.value.trim();
+                if (message === '') return;
+                
+                // Add user message
+                addMessage(message, 'user');
+                chatbotInput.value = '';
+                
+                // Generate and add bot response
+                setTimeout(() => {
+                    const response = generateResponse(message);
+                    addMessage(response, 'bot');
+                }, 1000);
+            }
+            
+            // Add message to chat
+            function addMessage(text, sender) {
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message');
+                messageElement.classList.add(sender === 'user' ? 'user-message' : 'bot-message');
+                messageElement.textContent = text;
+                
+                chatbotMessages.appendChild(messageElement);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+            
+            // Generate bot response
+            function generateResponse(message) {
+                const lowerMessage = message.toLowerCase();
+                
+                if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
+                    return getRandomResponse(chatbotResponses.greeting);
+                } else if (lowerMessage.includes('who are you') || lowerMessage.includes('about')) {
+                    return getRandomResponse(chatbotResponses.portfolio);
+                } else if (lowerMessage.includes('project') || lowerMessage.includes('work')) {
+                    return getRandomResponse(chatbotResponses.projects);
+                } else if (lowerMessage.includes('contact') || lowerMessage.includes('email') || lowerMessage.includes('reach')) {
+                    return getRandomResponse(chatbotResponses.contact);
+                } else if (lowerMessage.includes('skill') || lowerMessage.includes('technology')) {
+                    return getRandomResponse(chatbotResponses.skills);
+                } else {
+                    return getRandomResponse(chatbotResponses.default);
+                }
+            }
+            
+            // Get random response from array
+            function getRandomResponse(responses) {
+                return responses[Math.floor(Math.random() * responses.length)];
+            }
+            
+            // Event listeners for sending messages
+            chatbotSend.addEventListener('click', sendMessage);
+            chatbotInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
